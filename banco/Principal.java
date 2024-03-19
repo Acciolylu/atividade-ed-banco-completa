@@ -19,7 +19,7 @@ public class Principal {
         c.adicionarConta(conta5);
 
         Scanner scanner = new Scanner(System.in);
-        /*System.out.println("Qual conta deseja procurar?:");
+        System.out.println("Qual conta deseja procurar?:");
         String nomeBusca = scanner.nextLine();
 
        Conta procurarConta = c.procurarConta(nomeBusca);
@@ -29,7 +29,7 @@ public class Principal {
             System.out.println("Conta não encontrada.");
         }
 
-        /*System.out.println(Arrays.toString(c.listarConta()));*/
+        System.out.println(Arrays.toString(c.listarConta()));
 
         CadastrarConta cad = new CadastrarConta();
         cad.adicionarContaPosicao();

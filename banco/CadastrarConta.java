@@ -33,14 +33,13 @@ public class CadastrarConta {
         String nome = scanner.nextLine();
         System.out.print("Digite o saldo da conta: ");
         double saldo = scanner.nextDouble();
-        scanner.nextLine(); // consume newline character
-
+        scanner.nextLine(); 
         System.out.print("Digite a posição para adicionar a conta: ");
         int posicao = scanner.nextInt();
 
         if (posicao >= 0 && posicao < this.contas.length && this.contas[posicao] == null) {
             this.contas[posicao] = new Conta(nome, saldo);
-            this.p = Math.max(posicao, this.p);
+           
             System.out.println("Conta adicionada com sucesso!");
         } else {
             System.out.println("Posição inválida.");
@@ -49,21 +48,3 @@ public class CadastrarConta {
 }
       
       
-/* 
-public void adicionarConta(String nome, double valor, int posicao) {
-    if (posicao < 0 || posicao >= p) {
-        System.out.println("Posição inválida.");
-        return;
-    }
-
-    if (contas[posicao] == null) {
-        contas[posicao] = new Conta(nome, valor);
-        p++;
-    } else {
-        System.out.println("Limite de contas atingido!");
-        for (int i = p; i > posicao; i--) {
-            contas[i] = contas[i - 1];
-        }
-        contas[posicao] = new Conta(nome, valor);
-        p++;
-    }*/
